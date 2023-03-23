@@ -35,14 +35,50 @@ form .dbl-field{
 }
 .dbl-field .field{
     height: 50px;
+    position: relative;
     width: calc(100% / 2 - 13px);
 }
 form .field input, form .message textarea{
     height: 100%;
     width: 100%;
     outline: none;
-    padding: 0 18px;
+    padding: 0 18px 0 48px;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #bfbfbf;
+}
+form .field input::placeholder, form .message textarea::placeholder{
+    color: #bfbfbf;
+}
+form .field input:focus, form .message textarea:focus{
+    border: 2px solid #0d6efd;
+}
+.wrapper form i{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #bfbfbf;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+form .field input:focus ~ i, form .message textarea:focus ~ i{
+    color: #0d6efd;
+}
+form .message{
+    position: relative;
+}
+form .message i{
+    top: 30px;
+    font-size: 20px;
+}
+form .message textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    padding: 15px 20px 0 48px;
+}
+form .button-area{
+    
 }
