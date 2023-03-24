@@ -12,7 +12,7 @@ form.onsubmit = (e)=>{
     xhr.onload = ()=>{ //Once ajax loaded
         if(xhr.readyState == 4 && xhr.status == 200){ // If ajax response is 200 & ready status is 400 means there is no any error
             let response = xhr.response // Storing ajax response in a response variable
-            console.log(response);
+            console.log(response)
         }
     }
     xhr.send()
