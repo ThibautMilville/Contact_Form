@@ -6,5 +6,9 @@
     $website = $_POST['website'];
     $message = $_POST['message'];
 
-    echo $name;
+    if(!empty($email) && !empty($message)){ // If email and message fields are not empty
+
+    }else{
+        echo "Email and message field are required!";
+    }
 ?>
