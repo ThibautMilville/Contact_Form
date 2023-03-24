@@ -15,5 +15,6 @@ form.onsubmit = (e)=>{
             console.log(response)
         }
     }
-    xhr.send()
+    let formData = new FormData(); // Creating new FormData object, this object is used to send form data
+    xhr.send(formData)
 }
