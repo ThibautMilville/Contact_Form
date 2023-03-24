@@ -7,8 +7,12 @@
     $message = $_POST['message'];
 
     if(!empty($email) && !empty($message)){ // If email and message fields are not empty
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
 
+        }else{
+            echo "Enter a valid email address!";
+        }
     }else{
-        echo "Email and message field are required!";
+        echo "Email and message fields are required!";
     }
 ?>
