@@ -17,7 +17,6 @@ form.onsubmit = (e)=>{
             if(response.indexOf("Email and message fields are required!") != -1 || response.indexOf("Enter a valid email address!") || response.indexOf("Sorry, failed to send your message!")){
                 statusTxt.style.color = "red"
             }else{
-                console.log("coucou")
                 form.reset()
                 setTimeout(()=>{
                     statusTxt.style.display = "none"
